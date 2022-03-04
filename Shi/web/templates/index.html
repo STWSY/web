@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Covid Detail</title>
+</head>
+<body>
+ 
+    <h1>Summary of Africa information</h1>
+    
+    {% for row in rows_deploy %}
+    <p>
+       <b>{{row["iso_code"]}}</b> | 
+       {{row["continent"]}} | 
+        {{ row["location"]}} | 
+       {{row['date']}}	| 
+       {{row["total_cases"]}} |
+        {{ row["new_cases"]}} |
+       {{row['new_cases_smoothed']}}	
+    </p>
+    {% endfor %}
+
+
+    <h1>Summary of owid-covid information</h1>
+    
+    {% for row in rows_status %}
+    <p> 
+       <b>{{row["iso_code"]}}</b> | 
+       {{row["continent"]}} | 
+        {{ row["location"]}} | 
+       {{row['date']}}	| 
+       {{row["total_cases"]}} |
+        {{ row["new_cases"]}} |
+       {{row['new_cases_smoothed']}}	
+    </p>
+    {% endfor %}
+</body>
+</html>
